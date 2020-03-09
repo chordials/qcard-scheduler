@@ -1,0 +1,521 @@
+digraph{
+source[label="source"]
+sink[label="sink"]
+WillardStraightHallMondayslot[label="('Willard Straight Hall', 'Monday', 'slot')"]
+KennedyHall(BSBandKennedy)Mondayslot[label="('Kennedy Hall (BSB and Kennedy)', 'Monday', 'slot')"]
+GreenDragonMondayslot[label="('Green Dragon', 'Monday', 'slot')"]
+CornellStoreMondayslot[label="('Cornell Store', 'Monday', 'slot')"]
+DuffieldHallMondayslot[label="('Duffield Hall', 'Monday', 'slot')"]
+TempleofZeusMondayslot[label="('Temple of Zeus', 'Monday', 'slot')"]
+MannLibraryMondayslot[label="('Mann Library', 'Monday', 'slot')"]
+GimmeCoffeeMondayslot[label="('Gimme Coffee', 'Monday', 'slot')"]
+PSBMondayslot[label="('PSB', 'Monday', 'slot')"]
+RPCC(IncludingNasties)Mondayslot[label="('RPCC (Including Nasties)', 'Monday', 'slot')"]
+OlinLibrary(LibeandLevelB)Mondayslot[label="('Olin Library (Libe and Level B)', 'Monday', 'slot')"]
+MVRMondayslot[label="('MVR', 'Monday', 'slot')"]
+MacsandTerraceCafesMondayslot[label="('Macs and Terrace Cafes', 'Monday', 'slot')"]
+WillardStraightHallTuesdayslot[label="('Willard Straight Hall', 'Tuesday', 'slot')"]
+KennedyHall(BSBandKennedy)Tuesdayslot[label="('Kennedy Hall (BSB and Kennedy)', 'Tuesday', 'slot')"]
+GreenDragonTuesdayslot[label="('Green Dragon', 'Tuesday', 'slot')"]
+CornellStoreTuesdayslot[label="('Cornell Store', 'Tuesday', 'slot')"]
+DuffieldHallTuesdayslot[label="('Duffield Hall', 'Tuesday', 'slot')"]
+TempleofZeusTuesdayslot[label="('Temple of Zeus', 'Tuesday', 'slot')"]
+MannLibraryTuesdayslot[label="('Mann Library', 'Tuesday', 'slot')"]
+GimmeCoffeeTuesdayslot[label="('Gimme Coffee', 'Tuesday', 'slot')"]
+PSBTuesdayslot[label="('PSB', 'Tuesday', 'slot')"]
+RPCC(IncludingNasties)Tuesdayslot[label="('RPCC (Including Nasties)', 'Tuesday', 'slot')"]
+OlinLibrary(LibeandLevelB)Tuesdayslot[label="('Olin Library (Libe and Level B)', 'Tuesday', 'slot')"]
+MVRTuesdayslot[label="('MVR', 'Tuesday', 'slot')"]
+MacsandTerraceCafesTuesdayslot[label="('Macs and Terrace Cafes', 'Tuesday', 'slot')"]
+WillardStraightHallWednesdayslot[label="('Willard Straight Hall', 'Wednesday', 'slot')"]
+KennedyHall(BSBandKennedy)Wednesdayslot[label="('Kennedy Hall (BSB and Kennedy)', 'Wednesday', 'slot')"]
+GreenDragonWednesdayslot[label="('Green Dragon', 'Wednesday', 'slot')"]
+CornellStoreWednesdayslot[label="('Cornell Store', 'Wednesday', 'slot')"]
+DuffieldHallWednesdayslot[label="('Duffield Hall', 'Wednesday', 'slot')"]
+TempleofZeusWednesdayslot[label="('Temple of Zeus', 'Wednesday', 'slot')"]
+MannLibraryWednesdayslot[label="('Mann Library', 'Wednesday', 'slot')"]
+GimmeCoffeeWednesdayslot[label="('Gimme Coffee', 'Wednesday', 'slot')"]
+PSBWednesdayslot[label="('PSB', 'Wednesday', 'slot')"]
+RPCC(IncludingNasties)Wednesdayslot[label="('RPCC (Including Nasties)', 'Wednesday', 'slot')"]
+OlinLibrary(LibeandLevelB)Wednesdayslot[label="('Olin Library (Libe and Level B)', 'Wednesday', 'slot')"]
+MVRWednesdayslot[label="('MVR', 'Wednesday', 'slot')"]
+MacsandTerraceCafesWednesdayslot[label="('Macs and Terrace Cafes', 'Wednesday', 'slot')"]
+WillardStraightHallThursdayslot[label="('Willard Straight Hall', 'Thursday', 'slot')"]
+KennedyHall(BSBandKennedy)Thursdayslot[label="('Kennedy Hall (BSB and Kennedy)', 'Thursday', 'slot')"]
+GreenDragonThursdayslot[label="('Green Dragon', 'Thursday', 'slot')"]
+CornellStoreThursdayslot[label="('Cornell Store', 'Thursday', 'slot')"]
+DuffieldHallThursdayslot[label="('Duffield Hall', 'Thursday', 'slot')"]
+TempleofZeusThursdayslot[label="('Temple of Zeus', 'Thursday', 'slot')"]
+MannLibraryThursdayslot[label="('Mann Library', 'Thursday', 'slot')"]
+GimmeCoffeeThursdayslot[label="('Gimme Coffee', 'Thursday', 'slot')"]
+PSBThursdayslot[label="('PSB', 'Thursday', 'slot')"]
+RPCC(IncludingNasties)Thursdayslot[label="('RPCC (Including Nasties)', 'Thursday', 'slot')"]
+OlinLibrary(LibeandLevelB)Thursdayslot[label="('Olin Library (Libe and Level B)', 'Thursday', 'slot')"]
+MVRThursdayslot[label="('MVR', 'Thursday', 'slot')"]
+MacsandTerraceCafesThursdayslot[label="('Macs and Terrace Cafes', 'Thursday', 'slot')"]
+WillardStraightHallFridayslot[label="('Willard Straight Hall', 'Friday', 'slot')"]
+KennedyHall(BSBandKennedy)Fridayslot[label="('Kennedy Hall (BSB and Kennedy)', 'Friday', 'slot')"]
+GreenDragonFridayslot[label="('Green Dragon', 'Friday', 'slot')"]
+CornellStoreFridayslot[label="('Cornell Store', 'Friday', 'slot')"]
+DuffieldHallFridayslot[label="('Duffield Hall', 'Friday', 'slot')"]
+TempleofZeusFridayslot[label="('Temple of Zeus', 'Friday', 'slot')"]
+MannLibraryFridayslot[label="('Mann Library', 'Friday', 'slot')"]
+GimmeCoffeeFridayslot[label="('Gimme Coffee', 'Friday', 'slot')"]
+PSBFridayslot[label="('PSB', 'Friday', 'slot')"]
+RPCC(IncludingNasties)Fridayslot[label="('RPCC (Including Nasties)', 'Friday', 'slot')"]
+OlinLibrary(LibeandLevelB)Fridayslot[label="('Olin Library (Libe and Level B)', 'Friday', 'slot')"]
+MVRFridayslot[label="('MVR', 'Friday', 'slot')"]
+MacsandTerraceCafesFridayslot[label="('Macs and Terrace Cafes', 'Friday', 'slot')"]
+Liv[label="Liv"]
+Pablo[label="Pablo"]
+Heather[label="Heather"]
+James[label="James"]
+Blake[label="Blake"]
+Kennedy[label="Kennedy"]
+Eliana[label="Eliana"]
+Ben[label="Ben"]
+Joo[label="Joo"]
+Aditi[label="Aditi"]
+Michelle[label="Michelle"]
+Jeanette[label="Jeanette"]
+Grayson[label="Grayson"]
+LivMondayday[label="('Liv', 'Monday', 'day')"]
+LivMonday1000avail[label="('Liv', 'Monday', '10:00', 'avail')"]
+LivTuesdayday[label="('Liv', 'Tuesday', 'day')"]
+LivTuesday1000avail[label="('Liv', 'Tuesday', '10:00', 'avail')"]
+LivWednesdayday[label="('Liv', 'Wednesday', 'day')"]
+LivWednesday1000avail[label="('Liv', 'Wednesday', '10:00', 'avail')"]
+LivThursdayday[label="('Liv', 'Thursday', 'day')"]
+LivThursday1000avail[label="('Liv', 'Thursday', '10:00', 'avail')"]
+PabloMondayday[label="('Pablo', 'Monday', 'day')"]
+PabloMonday1125avail[label="('Pablo', 'Monday', '11:25', 'avail')"]
+PabloTuesdayday[label="('Pablo', 'Tuesday', 'day')"]
+PabloTuesday1000avail[label="('Pablo', 'Tuesday', '10:00', 'avail')"]
+PabloWednesdayday[label="('Pablo', 'Wednesday', 'day')"]
+PabloWednesday1125avail[label="('Pablo', 'Wednesday', '11:25', 'avail')"]
+PabloThursdayday[label="('Pablo', 'Thursday', 'day')"]
+PabloThursday1000avail[label="('Pablo', 'Thursday', '10:00', 'avail')"]
+PabloFridayday[label="('Pablo', 'Friday', 'day')"]
+PabloFriday1000avail[label="('Pablo', 'Friday', '10:00', 'avail')"]
+HeatherTuesdayday[label="('Heather', 'Tuesday', 'day')"]
+HeatherTuesday1000avail[label="('Heather', 'Tuesday', '10:00', 'avail')"]
+HeatherThursdayday[label="('Heather', 'Thursday', 'day')"]
+HeatherThursday1000avail[label="('Heather', 'Thursday', '10:00', 'avail')"]
+JamesMondayday[label="('James', 'Monday', 'day')"]
+JamesMonday1000avail[label="('James', 'Monday', '10:00', 'avail')"]
+JamesWednesdayday[label="('James', 'Wednesday', 'day')"]
+JamesWednesday1000avail[label="('James', 'Wednesday', '10:00', 'avail')"]
+JamesFridayday[label="('James', 'Friday', 'day')"]
+JamesFriday1000avail[label="('James', 'Friday', '10:00', 'avail')"]
+BlakeMondayday[label="('Blake', 'Monday', 'day')"]
+BlakeMonday1100avail[label="('Blake', 'Monday', '11:00', 'avail')"]
+BlakeTuesdayday[label="('Blake', 'Tuesday', 'day')"]
+BlakeTuesday1000avail[label="('Blake', 'Tuesday', '10:00', 'avail')"]
+BlakeThursdayday[label="('Blake', 'Thursday', 'day')"]
+BlakeThursday1000avail[label="('Blake', 'Thursday', '10:00', 'avail')"]
+KennedyMondayday[label="('Kennedy', 'Monday', 'day')"]
+KennedyMonday1125avail[label="('Kennedy', 'Monday', '11:25', 'avail')"]
+KennedyTuesdayday[label="('Kennedy', 'Tuesday', 'day')"]
+KennedyTuesday1100avail[label="('Kennedy', 'Tuesday', '11:00', 'avail')"]
+KennedyWednesdayday[label="('Kennedy', 'Wednesday', 'day')"]
+KennedyWednesday1125avail[label="('Kennedy', 'Wednesday', '11:25', 'avail')"]
+KennedyThursdayday[label="('Kennedy', 'Thursday', 'day')"]
+KennedyThursday1100avail[label="('Kennedy', 'Thursday', '11:00', 'avail')"]
+KennedyFridayday[label="('Kennedy', 'Friday', 'day')"]
+KennedyFriday1000avail[label="('Kennedy', 'Friday', '10:00', 'avail')"]
+ElianaFridayday[label="('Eliana', 'Friday', 'day')"]
+ElianaFriday1000avail[label="('Eliana', 'Friday', '10:00', 'avail')"]
+ElianaFriday1205avail[label="('Eliana', 'Friday', '12:05', 'avail')"]
+BenTuesdayday[label="('Ben', 'Tuesday', 'day')"]
+BenTuesday1100avail[label="('Ben', 'Tuesday', '11:00', 'avail')"]
+BenThursdayday[label="('Ben', 'Thursday', 'day')"]
+BenThursday1100avail[label="('Ben', 'Thursday', '11:00', 'avail')"]
+JooMondayday[label="('Joo', 'Monday', 'day')"]
+JooMonday1000avail[label="('Joo', 'Monday', '10:00', 'avail')"]
+JooTuesdayday[label="('Joo', 'Tuesday', 'day')"]
+JooTuesday1125avail[label="('Joo', 'Tuesday', '11:25', 'avail')"]
+JooWednesdayday[label="('Joo', 'Wednesday', 'day')"]
+JooWednesday1000avail[label="('Joo', 'Wednesday', '10:00', 'avail')"]
+JooThursdayday[label="('Joo', 'Thursday', 'day')"]
+JooThursday1125avail[label="('Joo', 'Thursday', '11:25', 'avail')"]
+JooFridayday[label="('Joo', 'Friday', 'day')"]
+JooFriday1000avail[label="('Joo', 'Friday', '10:00', 'avail')"]
+AditiMondayday[label="('Aditi', 'Monday', 'day')"]
+AditiMonday1000avail[label="('Aditi', 'Monday', '10:00', 'avail')"]
+AditiTuesdayday[label="('Aditi', 'Tuesday', 'day')"]
+AditiTuesday1000avail[label="('Aditi', 'Tuesday', '10:00', 'avail')"]
+AditiWednesdayday[label="('Aditi', 'Wednesday', 'day')"]
+AditiWednesday1000avail[label="('Aditi', 'Wednesday', '10:00', 'avail')"]
+AditiThursdayday[label="('Aditi', 'Thursday', 'day')"]
+AditiThursday1000avail[label="('Aditi', 'Thursday', '10:00', 'avail')"]
+AditiFridayday[label="('Aditi', 'Friday', 'day')"]
+AditiFriday1000avail[label="('Aditi', 'Friday', '10:00', 'avail')"]
+MichelleTuesdayday[label="('Michelle', 'Tuesday', 'day')"]
+MichelleTuesday1000avail[label="('Michelle', 'Tuesday', '10:00', 'avail')"]
+MichelleThursdayday[label="('Michelle', 'Thursday', 'day')"]
+MichelleThursday1000avail[label="('Michelle', 'Thursday', '10:00', 'avail')"]
+JeanetteTuesdayday[label="('Jeanette', 'Tuesday', 'day')"]
+JeanetteTuesday1000avail[label="('Jeanette', 'Tuesday', '10:00', 'avail')"]
+JeanetteThursdayday[label="('Jeanette', 'Thursday', 'day')"]
+JeanetteThursday1205avail[label="('Jeanette', 'Thursday', '12:05', 'avail')"]
+GraysonMondayday[label="('Grayson', 'Monday', 'day')"]
+GraysonMonday1205avail[label="('Grayson', 'Monday', '12:05', 'avail')"]
+GraysonTuesdayday[label="('Grayson', 'Tuesday', 'day')"]
+GraysonTuesday1000avail[label="('Grayson', 'Tuesday', '10:00', 'avail')"]
+GraysonThursdayday[label="('Grayson', 'Thursday', 'day')"]
+GraysonThursday1000avail[label="('Grayson', 'Thursday', '10:00', 'avail')"]
+source -> Liv
+source -> Pablo
+source -> Heather
+source -> James
+source -> Blake
+source -> Kennedy
+source -> Eliana
+source -> Ben
+source -> Joo
+source -> Aditi
+source -> Michelle
+source -> Jeanette
+source -> Grayson
+WillardStraightHallMondayslot -> sink
+KennedyHall(BSBandKennedy)Mondayslot -> sink
+GreenDragonMondayslot -> sink
+CornellStoreMondayslot -> sink
+DuffieldHallMondayslot -> sink
+TempleofZeusMondayslot -> sink
+MannLibraryMondayslot -> sink
+GimmeCoffeeMondayslot -> sink
+PSBMondayslot -> sink
+RPCC(IncludingNasties)Mondayslot -> sink
+OlinLibrary(LibeandLevelB)Mondayslot -> sink
+MVRMondayslot -> sink
+MacsandTerraceCafesMondayslot -> sink
+WillardStraightHallTuesdayslot -> sink
+KennedyHall(BSBandKennedy)Tuesdayslot -> sink
+GreenDragonTuesdayslot -> sink
+CornellStoreTuesdayslot -> sink
+DuffieldHallTuesdayslot -> sink
+TempleofZeusTuesdayslot -> sink
+MannLibraryTuesdayslot -> sink
+GimmeCoffeeTuesdayslot -> sink
+PSBTuesdayslot -> sink
+RPCC(IncludingNasties)Tuesdayslot -> sink
+OlinLibrary(LibeandLevelB)Tuesdayslot -> sink
+MVRTuesdayslot -> sink
+MacsandTerraceCafesTuesdayslot -> sink
+WillardStraightHallWednesdayslot -> sink
+KennedyHall(BSBandKennedy)Wednesdayslot -> sink
+GreenDragonWednesdayslot -> sink
+CornellStoreWednesdayslot -> sink
+DuffieldHallWednesdayslot -> sink
+TempleofZeusWednesdayslot -> sink
+MannLibraryWednesdayslot -> sink
+GimmeCoffeeWednesdayslot -> sink
+PSBWednesdayslot -> sink
+RPCC(IncludingNasties)Wednesdayslot -> sink
+OlinLibrary(LibeandLevelB)Wednesdayslot -> sink
+MVRWednesdayslot -> sink
+MacsandTerraceCafesWednesdayslot -> sink
+WillardStraightHallThursdayslot -> sink
+KennedyHall(BSBandKennedy)Thursdayslot -> sink
+GreenDragonThursdayslot -> sink
+CornellStoreThursdayslot -> sink
+DuffieldHallThursdayslot -> sink
+TempleofZeusThursdayslot -> sink
+MannLibraryThursdayslot -> sink
+GimmeCoffeeThursdayslot -> sink
+PSBThursdayslot -> sink
+RPCC(IncludingNasties)Thursdayslot -> sink
+OlinLibrary(LibeandLevelB)Thursdayslot -> sink
+MVRThursdayslot -> sink
+MacsandTerraceCafesThursdayslot -> sink
+WillardStraightHallFridayslot -> sink
+KennedyHall(BSBandKennedy)Fridayslot -> sink
+GreenDragonFridayslot -> sink
+CornellStoreFridayslot -> sink
+DuffieldHallFridayslot -> sink
+TempleofZeusFridayslot -> sink
+MannLibraryFridayslot -> sink
+GimmeCoffeeFridayslot -> sink
+PSBFridayslot -> sink
+RPCC(IncludingNasties)Fridayslot -> sink
+OlinLibrary(LibeandLevelB)Fridayslot -> sink
+MVRFridayslot -> sink
+MacsandTerraceCafesFridayslot -> sink
+Liv -> LivMondayday
+Liv -> LivTuesdayday
+Liv -> LivWednesdayday
+Liv -> LivThursdayday
+Pablo -> PabloMondayday
+Pablo -> PabloTuesdayday
+Pablo -> PabloWednesdayday
+Pablo -> PabloThursdayday
+Pablo -> PabloFridayday
+Heather -> HeatherTuesdayday
+Heather -> HeatherThursdayday
+James -> JamesMondayday
+James -> JamesWednesdayday
+James -> JamesFridayday
+Blake -> BlakeMondayday
+Blake -> BlakeTuesdayday
+Blake -> BlakeThursdayday
+Kennedy -> KennedyMondayday
+Kennedy -> KennedyTuesdayday
+Kennedy -> KennedyWednesdayday
+Kennedy -> KennedyThursdayday
+Kennedy -> KennedyFridayday
+Eliana -> ElianaFridayday
+Ben -> BenTuesdayday
+Ben -> BenThursdayday
+Joo -> JooMondayday
+Joo -> JooTuesdayday
+Joo -> JooWednesdayday
+Joo -> JooThursdayday
+Joo -> JooFridayday
+Aditi -> AditiMondayday
+Aditi -> AditiTuesdayday
+Aditi -> AditiWednesdayday
+Aditi -> AditiThursdayday
+Aditi -> AditiFridayday
+Michelle -> MichelleTuesdayday
+Michelle -> MichelleThursdayday
+Jeanette -> JeanetteTuesdayday
+Jeanette -> JeanetteThursdayday
+Grayson -> GraysonMondayday
+Grayson -> GraysonTuesdayday
+Grayson -> GraysonThursdayday
+LivMondayday -> LivMonday1000avail
+LivMonday1000avail -> KennedyHall(BSBandKennedy)Mondayslot
+LivMonday1000avail -> MannLibraryMondayslot
+LivMonday1000avail -> MVRMondayslot
+LivTuesdayday -> LivTuesday1000avail
+LivTuesday1000avail -> KennedyHall(BSBandKennedy)Tuesdayslot
+LivTuesday1000avail -> MannLibraryTuesdayslot
+LivTuesday1000avail -> GimmeCoffeeTuesdayslot
+LivWednesdayday -> LivWednesday1000avail
+LivWednesday1000avail -> WillardStraightHallWednesdayslot
+LivWednesday1000avail -> GreenDragonWednesdayslot
+LivWednesday1000avail -> CornellStoreWednesdayslot
+LivWednesday1000avail -> TempleofZeusWednesdayslot
+LivWednesday1000avail -> PSBWednesdayslot
+LivWednesday1000avail -> OlinLibrary(LibeandLevelB)Wednesdayslot
+LivThursdayday -> LivThursday1000avail
+LivThursday1000avail -> WillardStraightHallThursdayslot
+LivThursday1000avail -> KennedyHall(BSBandKennedy)Thursdayslot
+LivThursday1000avail -> GreenDragonThursdayslot
+LivThursday1000avail -> CornellStoreThursdayslot
+LivThursday1000avail -> TempleofZeusThursdayslot
+LivThursday1000avail -> GimmeCoffeeThursdayslot
+LivThursday1000avail -> PSBThursdayslot
+LivThursday1000avail -> OlinLibrary(LibeandLevelB)Thursdayslot
+PabloMondayday -> PabloMonday1125avail
+PabloMonday1125avail -> DuffieldHallMondayslot
+PabloMonday1125avail -> GimmeCoffeeMondayslot
+PabloMonday1125avail -> MacsandTerraceCafesMondayslot
+PabloTuesdayday -> PabloTuesday1000avail
+PabloTuesday1000avail -> DuffieldHallTuesdayslot
+PabloTuesday1000avail -> GimmeCoffeeTuesdayslot
+PabloTuesday1000avail -> MacsandTerraceCafesTuesdayslot
+PabloWednesdayday -> PabloWednesday1125avail
+PabloWednesday1125avail -> DuffieldHallWednesdayslot
+PabloWednesday1125avail -> GimmeCoffeeWednesdayslot
+PabloWednesday1125avail -> MacsandTerraceCafesWednesdayslot
+PabloThursdayday -> PabloThursday1000avail
+PabloThursday1000avail -> DuffieldHallThursdayslot
+PabloThursday1000avail -> GimmeCoffeeThursdayslot
+PabloThursday1000avail -> MacsandTerraceCafesThursdayslot
+PabloFridayday -> PabloFriday1000avail
+PabloFriday1000avail -> DuffieldHallFridayslot
+PabloFriday1000avail -> GimmeCoffeeFridayslot
+PabloFriday1000avail -> MacsandTerraceCafesFridayslot
+HeatherTuesdayday -> HeatherTuesday1000avail
+HeatherTuesday1000avail -> WillardStraightHallTuesdayslot
+HeatherTuesday1000avail -> CornellStoreTuesdayslot
+HeatherTuesday1000avail -> OlinLibrary(LibeandLevelB)Tuesdayslot
+HeatherThursdayday -> HeatherThursday1000avail
+HeatherThursday1000avail -> WillardStraightHallThursdayslot
+HeatherThursday1000avail -> CornellStoreThursdayslot
+HeatherThursday1000avail -> OlinLibrary(LibeandLevelB)Thursdayslot
+JamesMondayday -> JamesMonday1000avail
+JamesMonday1000avail -> DuffieldHallMondayslot
+JamesMonday1000avail -> MannLibraryMondayslot
+JamesMonday1000avail -> GimmeCoffeeMondayslot
+JamesMonday1000avail -> MacsandTerraceCafesMondayslot
+JamesWednesdayday -> JamesWednesday1000avail
+JamesWednesday1000avail -> DuffieldHallWednesdayslot
+JamesWednesday1000avail -> MannLibraryWednesdayslot
+JamesWednesday1000avail -> GimmeCoffeeWednesdayslot
+JamesWednesday1000avail -> MacsandTerraceCafesWednesdayslot
+JamesFridayday -> JamesFriday1000avail
+JamesFriday1000avail -> KennedyHall(BSBandKennedy)Fridayslot
+JamesFriday1000avail -> DuffieldHallFridayslot
+JamesFriday1000avail -> MannLibraryFridayslot
+JamesFriday1000avail -> GimmeCoffeeFridayslot
+JamesFriday1000avail -> MacsandTerraceCafesFridayslot
+BlakeMondayday -> BlakeMonday1100avail
+BlakeMonday1100avail -> KennedyHall(BSBandKennedy)Mondayslot
+BlakeMonday1100avail -> MannLibraryMondayslot
+BlakeTuesdayday -> BlakeTuesday1000avail
+BlakeTuesday1000avail -> WillardStraightHallTuesdayslot
+BlakeTuesday1000avail -> GreenDragonTuesdayslot
+BlakeTuesday1000avail -> CornellStoreTuesdayslot
+BlakeTuesday1000avail -> TempleofZeusTuesdayslot
+BlakeTuesday1000avail -> PSBTuesdayslot
+BlakeTuesday1000avail -> OlinLibrary(LibeandLevelB)Tuesdayslot
+BlakeThursdayday -> BlakeThursday1000avail
+BlakeThursday1000avail -> WillardStraightHallThursdayslot
+BlakeThursday1000avail -> GreenDragonThursdayslot
+BlakeThursday1000avail -> CornellStoreThursdayslot
+BlakeThursday1000avail -> TempleofZeusThursdayslot
+BlakeThursday1000avail -> PSBThursdayslot
+BlakeThursday1000avail -> OlinLibrary(LibeandLevelB)Thursdayslot
+KennedyMondayday -> KennedyMonday1125avail
+KennedyMonday1125avail -> KennedyHall(BSBandKennedy)Mondayslot
+KennedyMonday1125avail -> GreenDragonMondayslot
+KennedyMonday1125avail -> TempleofZeusMondayslot
+KennedyMonday1125avail -> MannLibraryMondayslot
+KennedyMonday1125avail -> PSBMondayslot
+KennedyMonday1125avail -> MVRMondayslot
+KennedyTuesdayday -> KennedyTuesday1100avail
+KennedyTuesday1100avail -> MannLibraryTuesdayslot
+KennedyWednesdayday -> KennedyWednesday1125avail
+KennedyWednesday1125avail -> KennedyHall(BSBandKennedy)Wednesdayslot
+KennedyWednesday1125avail -> GreenDragonWednesdayslot
+KennedyWednesday1125avail -> TempleofZeusWednesdayslot
+KennedyWednesday1125avail -> MannLibraryWednesdayslot
+KennedyWednesday1125avail -> PSBWednesdayslot
+KennedyWednesday1125avail -> MVRWednesdayslot
+KennedyThursdayday -> KennedyThursday1100avail
+KennedyThursday1100avail -> MannLibraryThursdayslot
+KennedyFridayday -> KennedyFriday1000avail
+KennedyFriday1000avail -> WillardStraightHallFridayslot
+KennedyFriday1000avail -> GreenDragonFridayslot
+KennedyFriday1000avail -> CornellStoreFridayslot
+KennedyFriday1000avail -> TempleofZeusFridayslot
+KennedyFriday1000avail -> PSBFridayslot
+KennedyFriday1000avail -> OlinLibrary(LibeandLevelB)Fridayslot
+ElianaFridayday -> ElianaFriday1000avail
+ElianaFridayday -> ElianaFriday1205avail
+ElianaFriday1000avail -> GreenDragonFridayslot
+ElianaFriday1000avail -> DuffieldHallFridayslot
+ElianaFriday1000avail -> TempleofZeusFridayslot
+ElianaFriday1000avail -> GimmeCoffeeFridayslot
+ElianaFriday1000avail -> PSBFridayslot
+ElianaFriday1000avail -> MacsandTerraceCafesFridayslot
+ElianaFriday1205avail -> GreenDragonFridayslot
+ElianaFriday1205avail -> DuffieldHallFridayslot
+ElianaFriday1205avail -> TempleofZeusFridayslot
+ElianaFriday1205avail -> GimmeCoffeeFridayslot
+ElianaFriday1205avail -> PSBFridayslot
+ElianaFriday1205avail -> MacsandTerraceCafesFridayslot
+BenTuesdayday -> BenTuesday1100avail
+BenTuesday1100avail -> KennedyHall(BSBandKennedy)Tuesdayslot
+BenTuesday1100avail -> DuffieldHallTuesdayslot
+BenTuesday1100avail -> GimmeCoffeeTuesdayslot
+BenTuesday1100avail -> PSBTuesdayslot
+BenTuesday1100avail -> MVRTuesdayslot
+BenTuesday1100avail -> MacsandTerraceCafesTuesdayslot
+BenThursdayday -> BenThursday1100avail
+BenThursday1100avail -> KennedyHall(BSBandKennedy)Thursdayslot
+BenThursday1100avail -> DuffieldHallThursdayslot
+BenThursday1100avail -> GimmeCoffeeThursdayslot
+BenThursday1100avail -> PSBThursdayslot
+BenThursday1100avail -> MVRThursdayslot
+BenThursday1100avail -> MacsandTerraceCafesThursdayslot
+JooMondayday -> JooMonday1000avail
+JooMonday1000avail -> GreenDragonMondayslot
+JooMonday1000avail -> TempleofZeusMondayslot
+JooMonday1000avail -> PSBMondayslot
+JooMonday1000avail -> RPCC(IncludingNasties)Mondayslot
+JooTuesdayday -> JooTuesday1125avail
+JooTuesday1125avail -> GreenDragonTuesdayslot
+JooTuesday1125avail -> TempleofZeusTuesdayslot
+JooTuesday1125avail -> PSBTuesdayslot
+JooWednesdayday -> JooWednesday1000avail
+JooWednesday1000avail -> GreenDragonWednesdayslot
+JooWednesday1000avail -> TempleofZeusWednesdayslot
+JooWednesday1000avail -> PSBWednesdayslot
+JooWednesday1000avail -> RPCC(IncludingNasties)Wednesdayslot
+JooThursdayday -> JooThursday1125avail
+JooThursday1125avail -> GreenDragonThursdayslot
+JooThursday1125avail -> TempleofZeusThursdayslot
+JooThursday1125avail -> PSBThursdayslot
+JooFridayday -> JooFriday1000avail
+JooFriday1000avail -> GreenDragonFridayslot
+JooFriday1000avail -> TempleofZeusFridayslot
+JooFriday1000avail -> PSBFridayslot
+JooFriday1000avail -> RPCC(IncludingNasties)Fridayslot
+AditiMondayday -> AditiMonday1000avail
+AditiMonday1000avail -> KennedyHall(BSBandKennedy)Mondayslot
+AditiMonday1000avail -> GreenDragonMondayslot
+AditiMonday1000avail -> TempleofZeusMondayslot
+AditiMonday1000avail -> GimmeCoffeeMondayslot
+AditiMonday1000avail -> PSBMondayslot
+AditiTuesdayday -> AditiTuesday1000avail
+AditiTuesday1000avail -> GreenDragonTuesdayslot
+AditiTuesday1000avail -> TempleofZeusTuesdayslot
+AditiTuesday1000avail -> PSBTuesdayslot
+AditiTuesday1000avail -> OlinLibrary(LibeandLevelB)Tuesdayslot
+AditiWednesdayday -> AditiWednesday1000avail
+AditiWednesday1000avail -> KennedyHall(BSBandKennedy)Wednesdayslot
+AditiWednesday1000avail -> GreenDragonWednesdayslot
+AditiWednesday1000avail -> TempleofZeusWednesdayslot
+AditiWednesday1000avail -> GimmeCoffeeWednesdayslot
+AditiWednesday1000avail -> PSBWednesdayslot
+AditiThursdayday -> AditiThursday1000avail
+AditiThursday1000avail -> GreenDragonThursdayslot
+AditiThursday1000avail -> TempleofZeusThursdayslot
+AditiThursday1000avail -> PSBThursdayslot
+AditiThursday1000avail -> OlinLibrary(LibeandLevelB)Thursdayslot
+AditiFridayday -> AditiFriday1000avail
+AditiFriday1000avail -> KennedyHall(BSBandKennedy)Fridayslot
+AditiFriday1000avail -> GreenDragonFridayslot
+AditiFriday1000avail -> TempleofZeusFridayslot
+AditiFriday1000avail -> GimmeCoffeeFridayslot
+AditiFriday1000avail -> PSBFridayslot
+MichelleTuesdayday -> MichelleTuesday1000avail
+MichelleTuesday1000avail -> GreenDragonTuesdayslot
+MichelleTuesday1000avail -> TempleofZeusTuesdayslot
+MichelleTuesday1000avail -> MannLibraryTuesdayslot
+MichelleTuesday1000avail -> PSBTuesdayslot
+MichelleTuesday1000avail -> RPCC(IncludingNasties)Tuesdayslot
+MichelleThursdayday -> MichelleThursday1000avail
+MichelleThursday1000avail -> GreenDragonThursdayslot
+MichelleThursday1000avail -> TempleofZeusThursdayslot
+MichelleThursday1000avail -> MannLibraryThursdayslot
+MichelleThursday1000avail -> PSBThursdayslot
+MichelleThursday1000avail -> RPCC(IncludingNasties)Thursdayslot
+JeanetteTuesdayday -> JeanetteTuesday1000avail
+JeanetteTuesday1000avail -> KennedyHall(BSBandKennedy)Tuesdayslot
+JeanetteTuesday1000avail -> GreenDragonTuesdayslot
+JeanetteTuesday1000avail -> TempleofZeusTuesdayslot
+JeanetteTuesday1000avail -> MannLibraryTuesdayslot
+JeanetteTuesday1000avail -> PSBTuesdayslot
+JeanetteTuesday1000avail -> MVRTuesdayslot
+JeanetteThursdayday -> JeanetteThursday1205avail
+JeanetteThursday1205avail -> WillardStraightHallThursdayslot
+JeanetteThursday1205avail -> KennedyHall(BSBandKennedy)Thursdayslot
+JeanetteThursday1205avail -> GreenDragonThursdayslot
+JeanetteThursday1205avail -> CornellStoreThursdayslot
+JeanetteThursday1205avail -> TempleofZeusThursdayslot
+JeanetteThursday1205avail -> GimmeCoffeeThursdayslot
+JeanetteThursday1205avail -> PSBThursdayslot
+JeanetteThursday1205avail -> OlinLibrary(LibeandLevelB)Thursdayslot
+GraysonMondayday -> GraysonMonday1205avail
+GraysonMonday1205avail -> WillardStraightHallMondayslot
+GraysonMonday1205avail -> GreenDragonMondayslot
+GraysonMonday1205avail -> CornellStoreMondayslot
+GraysonMonday1205avail -> TempleofZeusMondayslot
+GraysonMonday1205avail -> PSBMondayslot
+GraysonMonday1205avail -> OlinLibrary(LibeandLevelB)Mondayslot
+GraysonTuesdayday -> GraysonTuesday1000avail
+GraysonTuesday1000avail -> GreenDragonTuesdayslot
+GraysonTuesday1000avail -> TempleofZeusTuesdayslot
+GraysonTuesday1000avail -> PSBTuesdayslot
+GraysonTuesday1000avail -> RPCC(IncludingNasties)Tuesdayslot
+GraysonThursdayday -> GraysonThursday1000avail
+GraysonThursday1000avail -> GreenDragonThursdayslot
+GraysonThursday1000avail -> TempleofZeusThursdayslot
+GraysonThursday1000avail -> PSBThursdayslot
+GraysonThursday1000avail -> RPCC(IncludingNasties)Thursdayslot
+}

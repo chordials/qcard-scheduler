@@ -1,0 +1,28 @@
+digraph {
+    splines=line;
+    rankdir=LR;
+    subgraph cluster_0 {
+        label="Node for each person";
+        person1; person2;
+    }
+
+    subgraph cluster_1 {
+        label="Node for person and time slot";
+        per1t1; per1t2; per2t1; per2t3;
+    }
+    
+    subgraph cluster_2 {
+        label="Node for timeslot and location";
+        t1place1; t2place2; t1place2;
+    }
+    source;
+    sink;
+
+    source -> {person1, person2}[label="n"];
+    person1 -> {per1t1, per1t2}[label="1",weight="1"];
+    person2 -> {per2t1, per2t3}[label="1",weight="1"];
+    per1t1 -> t1place2[label="1",weight="1"];
+    per1t2 -> t2place2[label="1",weight="1"];
+    per2t1 -> t1place2[label="1",weight="1"];
+    {t1place1, t2place2, t1place2} -> sink[label="1",weight="1"];
+}

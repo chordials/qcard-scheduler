@@ -1,0 +1,143 @@
+{
+    "Liv":{
+        "Monday":[
+            ["n/a", "10:00", "", "1h30m", "Mann Library"]
+        ],
+        "Tuesday":[
+            ["n/a", "10:00", "Mallot Hall", "2h10m", "Plant Sciences Building"]
+        ],
+        "Wednesday":[
+            ["n/a", "10:00", "", "2h", "Stimson Hall"]
+        ],
+        "Thursday":[
+            ["n/a", "10:00", "Mallot Hall", "2h10m", "Stimson Hall"]
+        ]
+    }, "Pablo":{
+        "Monday":[
+            ["Coffees", "11:25", "Statler Hall", "4h30m", "Gates Hall"]
+        ],
+        "Tuesday":[
+            ["n/a", "10:00", "", "3h15m", "Kimball Hall"]
+        ],
+        "Wednesday":[
+            ["Coffees", "11:25", "Statler Hall", "3h20m", "Statler Hall"]
+        ],
+        "Thursday":[
+            ["n/a", "10:00", "", "1h30m", "Carpenter Hall"]
+        ],
+        "Friday":[
+            ["n/a", "10:00", "Collegetown", "5h"]
+        ]
+    }, "Heather":{
+        "Tuesday":[
+            ["n/a", "10:00", "West Campus", "4h", "Myron Taylor Hall"]
+        ],
+        "Thursday":[
+            ["n/a", "10:00", "West Campus", "4h", "Myron Taylor Hall"]
+        ]
+    }, "James":{
+        "Monday":[
+            ["n/a", "10:00", "Collegetown", "2h10m", "Wing Hall"]
+        ],
+        "Wednesday":[
+            ["n/a", "10:00", "Collegetown", "2h10m", "Wing Hall"]
+        ], 
+        "Friday":[
+            ["n/a", "10:00", "Collegetown", "2h10m", "Bradfield Hall"]
+        ]
+    }, "Blake":{
+        "Monday":[
+            ["EAS 3410", "11:00", "Bradfield Hall", "1h10m", "Bradfield Hall"]
+        ],
+        "Tuesday":[
+            ["n/a", "10:00", "West Campus", "1h10m", "Millstein Hall"]
+        ],
+        "Thursday":[
+            ["n/a", "10:00", "West Campus", "1h10m", "Millstein Hall"]
+        ]
+    }, "Kennedy":{
+        "Monday":[
+            ["Oral Comm", "11:25", "Kennedy Hall", "1h50m", "Goldwin Smith Hall"]
+        ],
+        "Tuesday":[
+            ["Equine Biology and Management", "11:00", "Morrison Hall", "2h10m", "Morrison Hall"]
+        ],
+        "Wednesday":[
+            ["Oral Comm", "11:25", "Kennedy Hall", "1h50m", "Goldwin Smith Hall"]
+        ],
+        "Thursday":[
+            ["Equine Biology and Management", "11:00", "Morrison Hall", "2h10m", "Morrison Hall"]
+        ],
+        "Friday":[
+            ["n/a", "10:00", "West Campus", "3h", "Goldwin Smith Hall"]
+        ]
+    }, "Eliana":{
+        "Friday":[
+            ["n/a", "10:00", "Collegetown", "1h10m", "Rockefeller Hall"],
+            ["n/a", "12:05", "Rockefeller Hall", "3h", "Collegetown"]
+        ]
+    }, "Ben":{
+        "Tuesday":[
+            ["CS 3110", "11:00", "Bailey Hall", "2h15m", "Hollister Hall"]
+        ],
+        "Thursday":[
+            ["CS 3110", "11:00", "Bailey Hall", "2h15m", "Hollister Hall"]
+        ]
+    }, "Joo":{
+        "Monday":[
+            ["n/a", "10:00", "North Campus", "1h10m", "Lincoln Hall"]
+        ],
+        "Tuesday":[
+            ["MUSIC 1701", "11:25", "Lincoln Hall", "3h", "Lincoln Hall"]
+        ], 
+        "Wednesday":[
+            ["n/a", "10:00", "North Campus", "1h10m", "Lincoln Hall"]
+        ], 
+        "Thursday":[
+            ["MUSIC 1701", "11:25", "Lincoln Hall", "1h20m", "Lincoln Hall"]
+        ],
+        "Friday":[
+            ["n/a", "10:00", "North Campus", "1h10m", "Lincoln Hall"]
+        ]
+    }, "Aditi":{
+        "Monday":[
+            ["Math Lecture", "10:00", "Mallot Hall", "2h10m", "Baker Hall"]
+        ],
+        "Tuesday":[
+            ["CS Lecture", "10:00", "Klarman Hall", "3h15m", "White Hall"]
+        ], 
+        "Wednesday":[
+            ["Math Lecture", "10:00", "Mallot Hall", "2h10m", "Baker Hall"]
+        ],
+        "Thursday":[
+            ["CS Lecture", "10:00", "Klarman Hall", "3h15m", "White Hall"]
+        ],
+        "Friday":[
+            ["Math Lecture", "10:00", "Mallot Hall", "2h10m", "Baker Hall"]
+        ]
+    }, "Michelle":{
+        "Tuesday":[
+            ["n/a", "10:00", "North Campus", "1h30m", "Morrison Hall"]
+        ],
+        "Thursday":[
+            ["n/a", "10:00", "North Campus", "1h30m", "Morrison Hall"]
+        ]
+    }, "Jeanette":{
+        "Tuesday":[
+            ["BIOG 1500", "10:00", "Kennedy Hall", "3h", "Baker Hall"]
+        ],
+        "Thursday":[
+            ["BIOG 1500", "12:05", "Comstock Hall", "2h30m", "Stimson Hall"]
+        ]
+    }, "Grayson":{
+        "Monday":[
+            ["SPAN 1210", "12:05", "Goldwin Smith Hall", "2h30m", "Olin Hall"]
+        ],
+        "Tuesday":[
+            ["n/a", "10:00", "North Campus", "1h10m", "Goldwin Smith Hall"]
+        ],
+        "Thursday":[
+            ["n/a", "10:00", "North Campus", "1h10m", "Goldwin Smith Hall"]
+        ]
+    }
+ }

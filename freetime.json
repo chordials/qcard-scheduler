@@ -1,0 +1,199 @@
+{
+    "Simon":{
+       "Sunday":[
+            
+       ],
+       "Monday":[
+            ["class", "11:00", "McGraw Hall", "1h20m"]
+       ],
+       "Tuesday":[
+            ["class", "11:25", "Rockefeller Hall", "2h"]
+       ],
+       "Wednesday":[
+            ["class", "11:00", "McGraw Hall", "1h20m"]
+        ],
+       "Thursday":[
+            ["class", "11:25", "Rockefeller Hall", "2h"]
+       ],
+       "Friday":[
+            ["class", "11:00", "McGraw Hall", "1h20m"]
+       ],
+       "Saturday":[
+            
+       ]
+    }, "Caroline":{
+        "Sunday":[
+             
+        ],
+        "Monday":[
+            ["n/a", "10:00", "", "3h25m", "Kennedy Hall"]
+        ],
+        "Tuesday":[
+            ["chem", "11:00", "Baker Hall", "3h25m"]
+        ],
+        "Wednesday":[
+            ["n/a", "10:00", "North Campus", "2h20m", "Kennedy Hall"]
+         ],
+        "Thursday":[
+            ["class", "12:05", "Stimson Hall", "40m"]
+        ],
+        "Friday":[
+            ["n/a", "10:00", "North Campus", "2h20m", "Kennedy Hall"]
+        ],
+        "Saturday":[
+             
+        ]
+     }, "Liv":{
+        "Sunday":[
+             
+        ],
+        "Monday":[
+            ["class", "12:15", "MVR", "1h10m", "Thurston Hall"]
+        ],
+        "Tuesday":[
+            ["n/a", "9:00", "Collegetown", "1h10m", "MVR"]
+        ],
+        "Wednesday":[
+            ["lab", "12:30", "MVR", "55m", "Thurston Hall"]
+         ],
+        "Thursday":[
+        ],
+        "Friday":[
+            ["class", "12:30", "MVR", "55m"]
+        ],
+        "Saturday":[ 
+        ]
+     }, "Pablo":{
+        "Sunday":[
+             
+        ],
+        "Monday":[
+        ],
+        "Tuesday":[
+            ["class", "11:25", "Gates Hall", "2h30m", "Phillips Hall"]
+        ],
+        "Wednesday":[
+            ["class", "11:00", "Mallot Hall", "1h20m", "Morril Hall"]
+         ],
+        "Thursday":[
+            ["class", "11:25", "Gates Hall", "2h30m", "Phillips Hall"]
+        ],
+        "Friday":[
+            ["class", "11:00", "Mallot Hall", "40m", "Phillips Hall"]
+        ],
+        "Saturday":[ 
+        ]
+    }, "Heather":{
+        "Sunday":[
+             
+        ],
+        "Monday":[
+            ["class", "10:00", "Goldwin Smith Hall", "2h30m"]
+        ],
+        "Tuesday":[
+            ["class", "12:55", "Uris Hall", "2h"]
+        ],
+        "Wednesday":[
+            ["class", "11:00", "Goldwin Smith Hall", "2h20m", "Thurston Hall"]
+         ],
+        "Thursday":[
+            ["class", "12:55", "Uris Hall", "2h"]
+        ],
+        "Friday":[
+            ["class", "10:00", "Goldwin Smith Hall", "2h30m"]
+        ],
+        "Saturday":[ 
+        ]
+    }, "James":{
+        "Sunday":[
+             
+        ],
+        "Monday":[
+            ["class", "12:05", "Morrison Hall", "1h15m, Warren Hall"]
+        ],
+        "Tuesday":[
+            ["class", "11:00", "Baker Hall", "40m", "Goldwin Smith Hall"]
+        ],
+        "Wednesday":[
+            ["n/a", "9:55", "West Campus", "1h20m", "Morrison Hall"]
+         ],
+        "Thursday":[
+            ["class", "11:00", "Baker Hall", "40m", "Goldwin Smith Hall"],
+            ["class", "12:55", "Goldwin Smith Hall", "2h", "Kennedy Hall"]
+        ],
+        "Friday":[
+            ["class", "12:05", "Morrison Hall", "1h15m, Baker Hall"]
+        ],
+        "Saturday":[ 
+        ]
+    }, "Komal":{
+        "Sunday":[
+             
+        ],
+        "Monday":[
+            ["class", "12:05", "Goldwin Smith Hall", "1h15m", "Rockefeller Hall"]
+        ],
+        "Tuesday":[
+            ["class", "10:00", "Uris Hall", "3h25m", "Goldwin Smith Hall"]
+        ],
+        "Wednesday":[
+            ["class", "12:05", "Goldwin Smith Hall", "1h15m", "Rockefeller Hall"]
+         ],
+        "Thursday":[
+            ["class", "10:00", "Uris Hall", "3h25m", "Goldwin Smith Hall"]
+        ],
+        "Friday":[
+            
+        ],
+        "Saturday":[ 
+        ]
+    }, "Blake":{
+        "Sunday":[
+             
+        ],
+        "Monday":[
+            ["n/a", "10:00", "West Campus", "1h20m", "Rockefeller Hall"],
+            ["class", "1:10", "Klarman Hall", "41m", "Statler Hall"]
+        ],
+        "Tuesday":[
+            ["class", "11:25", "Bradfield Hall", "3h25m", "Clark Hall"],
+            ["class", "1:10", "Clark Hall", "41m", "Rockefeller Hall"]
+        ],
+        "Wednesday":[
+            ["n/a", "10:00", "West Campus", "1h20m", "Rockefeller Hall"],
+            ["class", "1:10", "Klarman Hall", "41m", "Statler Hall"]
+         ],
+        "Thursday":[
+            ["class", "1:10", "Bradfield Hall", "3h25m", "Clark Hall"]
+        ],
+        "Friday":[
+            ["n/a", "10:00", "West Campus", "1h20m", "Rockefeller Hall"],
+            ["class", "1:10", "Klarman Hall", "41m", "Hollister Hall"]
+        ],
+        "Saturday":[ 
+        ]
+    }, "Kennedy":{
+        "Sunday":[
+             
+        ],
+        "Monday":[
+            ["class", "11:00", "Kennedy Hall", "1h10m", "Goldwin Smith Hall"],
+            ["class", "1:10", "Goldwin Smith Hall", "41m"]
+        ],
+        "Tuesday":[
+        ],
+        "Wednesday":[
+            ["class", "11:00", "Kennedy Hall", "1h10m", "Goldwin Smith Hall"],
+            ["class", "1:10", "Goldwin Smith Hall", "41m"]
+         ],
+        "Thursday":[
+            ["class", "11:00", "Baker Hall", "1h10m"]
+        ],
+        "Friday":[
+            ["class", "11:00", "Kennedy Hall", "1h10m", "Goldwin Smith Hall"],
+            ["class", "1:10", "Goldwin Smith Hall", "41m"]
+        ],
+        "Saturday":[ 
+        ]
+    }
+ }
