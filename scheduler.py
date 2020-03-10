@@ -279,6 +279,8 @@ class Edge(object):
         self.cost = 0
 
     def set_flow(self, flow):
+        if flow > self.capacity:
+            raise RuntimeError("Flow is greater than capacity")
         self.flow = flow
     
     def set_capacity(self, capacity):
@@ -288,7 +290,7 @@ class Edge(object):
         self.cost = cost
 
     def __repr__(self):
-        return "->" + str(self.destination) + "/" + str(self.cost) + "/" + str(self.flow)
+        return "->" + str(self.destination) + "/" + str(self.cost) + "/" + str(self.flow) + "/" + str(self.capacity)
 
 class Graph(object):
     def __init__(self):
@@ -357,8 +359,13 @@ class Graph(object):
         for i in range(len(augmenting_path_nodes)-1):
             node_s = augmenting_path_nodes[i]
             node_d = augmenting_path_nodes[i+1]
-            augmentable_edge = self.get_edge(node_s, node_d)
-            augmentable_edge.set_flow(augmentable_edge.flow + bottleneck)
+            augmentable_edge = self.get_edge(node_s, node_d, consider_backwards=False)
+            if augmentable_edge:
+                augmentable_edge.set_flow(augmentable_edge.flow + bottleneck)
+            else:
+                # reversing flow
+                augmentable_edge = self.get_edge(node_d, node_s, consider_backwards=False)
+                augmentable_edge.set_flow(augmentable_edge.flow - bottleneck)
 
     @property
     def total_edges(self):
@@ -421,12 +428,13 @@ class Graph(object):
                     cost_network.add_edge(node, e)
         return cost_network
 
+    def inf(self):
+        return float("inf")
 
     def bellman_ford(self): 
-        dist = {node : float("Inf") for node in self.adjacencies}
+        dist = defaultdict(self.inf)
         dist[self.get_source()] = 0
         # Since sink doesn't have any outgoing edges
-        dist[self.get_sink()] = float("Inf")
         parent = {node : None for node in self.adjacencies}
 
         # Step 2: Relax all edges |V| - 1 times. A simple shortest  
@@ -553,43 +561,45 @@ class QuarterCardGraph(Graph):
             edge.set_cost(cost)
 
 class Conflicts(ics.Calendar):
+    days_to_numbers = {"MO":1, "TU":2, "WE":3, "TH":4, "FR":5, "SA":6, "SU":7}
     @classmethod
     def from_ics_file(cls, path, member, home, location_resolver):
         cal = cls(open(path, "r").read())
         cal.member = member
         cal.home = home
         cal.location_resolver = location_resolver
+        cal.add_event_copies()
         return cal
 
     def get_freetime_for_one_day(self, day):
         # filter out events not occuring on specified day
         events = [e for e in self.events if e.begin.format("dddd") == day]
+        model_event = events[0] if events else list(self.events)[0]
+    
         graph = Graph()
         day_node = MemberDayNode(self.member, day)
         graph.add_node(day_node)
-        if events:
-            #
-            timeline = ics.Calendar(events=events).timeline
-            # start at 9am
-            prev_arrow = events[0].begin.replace(hour=9, minute=0, second=0, microsecond=0)
-            # end at 6pm
-            final_arrow = events[0].begin.replace(hour=18, minute=0, second=0, microsecond=0)
-            prev_location = self.home
-            for event in timeline:
-                if prev_arrow >= event.begin:
-                    prev_arrow = max(prev_arrow, event.end)
-                    continue
-                elif prev_arrow > final_arrow:
-                    break
-                else:
-                    event_location = location_resolver.resolve_location(event.location)
-                    freetime_node = MemberDayTimeNode(
-                        self.member, day, prev_arrow, event.begin, prev_location, event_location
-                    )
-                    graph.add_node(freetime_node)
-                    graph.add_edge(day_node, Edge(freetime_node))
-                    prev_arrow = event.end
-                    prev_location = event_location
+        timeline = ics.Calendar(events=events).timeline
+        # start at 9am
+        prev_arrow = model_event.begin.replace(hour=9, minute=0, second=0, microsecond=0)
+        # end at 6pm
+        final_arrow = model_event.begin.replace(hour=18, minute=0, second=0, microsecond=0)
+        prev_location = self.home
+        for event in timeline:
+            if prev_arrow >= event.begin:
+                prev_arrow = max(prev_arrow, event.end)
+                continue
+            elif prev_arrow > final_arrow:
+                break
+            else:
+                event_location = location_resolver.resolve_location(event.location)
+                freetime_node = MemberDayTimeNode(
+                    self.member, day, prev_arrow, event.begin, prev_location, event_location
+                )
+                graph.add_node(freetime_node)
+                graph.add_edge(day_node, Edge(freetime_node))
+                prev_arrow = event.end
+                prev_location = event_location
         if prev_arrow < final_arrow:
             freetime_node = MemberDayTimeNode(
                 self.member, day, prev_arrow, final_arrow, prev_location, self.home
@@ -597,7 +607,31 @@ class Conflicts(ics.Calendar):
             graph.add_node(freetime_node)
             graph.add_edge(day_node, Edge(freetime_node))
         return graph
-        
+    
+    def add_event_copies(self):
+        clones = set()
+        for event in self.events:
+            day_pattern = re.compile("^.*BYDAY=(?P<days>([A-Z]{2},)*[A-Z]{2})")
+            repeats = [el.value for el in event.extra if el.name == "RRULE"]
+            repeats = [day_pattern.match(el).group("days").split(",") for el in repeats]
+            if not repeats:
+                return None
+            repeat = repeats[0]
+            repeat = [self.days_to_numbers[day_abbr] for day_abbr in repeat]
+            event_day = int(event.begin.format("d"))
+            repeat = [num for num in repeat if num != event_day]
+            for day in repeat:
+                diff = day - event_day
+                clone = event.clone()
+                if diff < 0:
+                    clone.begin = clone.begin.shift(days=diff)
+                    clone.end = clone.end.shift(days=diff)
+                else:
+                    clone.end = clone.end.shift(days=diff)
+                    clone.begin = clone.begin.shift(days=diff)
+                clones.add(clone)
+        self.events.update(clones)
+
     def get_freetime(self):
         graph = Graph()
         member_node = MemberNode(self.member)
@@ -646,21 +680,45 @@ if __name__ == "__main__":
     location_resolver = LocationResolver(Path("new_location_data.json"))
     for path in Path("schedules").iterdir():
         if path.name.endswith(".ics"):
-            conflicts.append(
-                Conflicts.from_ics_file(
+            conflict_obj = Conflicts.from_ics_file(
                     path, path.name[:-4], home="Collegetown", location_resolver=location_resolver
                 )
+                
+            conflicts.append(conflict_obj)
+    daily_limit = 5
+    weekly_limit = 14
+    best_weekly_limit = 0
+    best_daily_limit = 0
+    best_graph = None
+    best_flow = 0
+    for potential_daily_limit in range(1, daily_limit+1):
+        for potential_weekly_limit in range(1, weekly_limit+1):
+            g = QuarterCardGraph(
+                conflicts, 
+                potential_daily_limit, 
+                potential_weekly_limit, 
+                ("Gates", "Carpenter")
             )
-            g = QuarterCardGraph(conflicts, 3, 14, ("Gates", "Carpenter"))
             g.maximize_flow()
-            # for k, v in g.bellman_ford().items():
-            #     print(str(k) + " " + str(v))
-            for k, v in g.adjacencies.items():
-                if isinstance(k, MemberDayTimeNode):
-                    edges = {edge for edge in v if edge.flow > 0}
-                    if edges:
-                        print(str(k) + "   " + str(edges))
-            # print(g)
+            if g.total_flow > best_flow:
+                best_graph = g
+                best_weekly_limit = potential_weekly_limit 
+                best_daily_limit = potential_daily_limit
+                best_flow = best_graph.total_flow
+
+    # print(best_graph)
+    print("Best daily limit -> ", best_daily_limit)
+    print("Best weekly limit -> ", best_weekly_limit)
+    print("Best flow -> ", best_flow)
+
+    # for k, v in g.bellman_ford().items():
+    #     print(str(k) + " " + str(v))
+    for k, v in best_graph.adjacencies.items():
+        if isinstance(k, MemberDayTimeNode):
+            edges = {edge for edge in v if edge.flow > 0}
+            if edges:
+                print(str(k) + "   " + str(edges))
+    # print(g)
         
         
 
