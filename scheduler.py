@@ -4,13 +4,13 @@ import networkx
 import re
 import networkx.algorithms.flow
 import copy
-import ics
 from collections import defaultdict
-import arrow
 from copy import deepcopy
 from pathlib import Path
 import math
+import ics
 from collections import deque
+import time
 
 global HUBS
 global NEARNESS_MAP
@@ -686,18 +686,21 @@ if __name__ == "__main__":
                 
             conflicts.append(conflict_obj)
     daily_limit = 5
-    weekly_limit = 14
+    weekly_limit = 20
     best_weekly_limit = 0
     best_daily_limit = 0
     best_graph = None
     best_flow = 0
+    runtimes = []
+    prev_flow = 0
     for potential_daily_limit in range(1, daily_limit+1):
-        for potential_weekly_limit in range(1, weekly_limit+1):
+        for potential_weekly_limit in range(potential_daily_limit, weekly_limit+1):
+            start_time = time.time()
             g = QuarterCardGraph(
                 conflicts, 
                 potential_daily_limit, 
                 potential_weekly_limit, 
-                ("Gates", "Carpenter")
+                ("Gimme", "WSH", "Cornell Store", "Olin Library", "Kennedy Hall", "Mann Library", "Dairy Bar", "Temple of Zeus")
             )
             g.maximize_flow()
             if g.total_flow > best_flow:
@@ -705,6 +708,17 @@ if __name__ == "__main__":
                 best_weekly_limit = potential_weekly_limit 
                 best_daily_limit = potential_daily_limit
                 best_flow = best_graph.total_flow
+            if prev_flow == g.total_flow:
+                break
+            prev_flow = g.total_flow
+            runtime = time.time()-start_time
+            runtimes.append(runtime)
+            print(
+                "Weekly limit -> ", potential_weekly_limit,
+                "; Daily limit -> ", potential_daily_limit,
+                "; Flow -> ", g.total_flow,
+                "; Runtime -> ", time.time()-start_time)
+    print("Mean runtime ->", sum(runtimes)/len(runtimes))
 
     # print(best_graph)
     print("Best daily limit -> ", best_daily_limit)
@@ -716,8 +730,8 @@ if __name__ == "__main__":
     for k, v in best_graph.adjacencies.items():
         if isinstance(k, MemberDayTimeNode):
             edges = {edge for edge in v if edge.flow > 0}
-            if edges:
-                print(str(k) + "   " + str(edges))
+            # if edges:
+            #     print(str(k) + "   " + str(edges))
     # print(g)
         
         
