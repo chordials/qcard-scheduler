@@ -675,6 +675,81 @@ class LocationResolver(object):
         except IndexError:
             return False
 
+class LimitOptimizer(object):
+    """
+    Optimizes daily and weekly limits to satisfy the following in order
+    1. The number of locations being quarter-carded is maximized
+    2. The daily_limit is as low as possible
+    3. The weekly_limit is as low as possible
+    Objectives 2 and 3 ensure a near even distribution of work among members
+    """
+    def __init__(self, daily_limit, weekly_limit, hubs, conflicts):
+        self.daily_limit = daily_limit
+        self.weekly_limit = weekly_limit
+        self.hubs = hubs
+        self.conflicts = conflicts
+        self.best_weekly_limit = 0
+        self.best_daily_limit = 0
+        self.best_graph = None
+        self.best_flow = 0
+        self.optimized_weekly_limits = set()
+        self.prev_flows_by_weekly_lim = {i : 0 for i in range(1, weekly_limit+1)}
+
+    def run_one_set_of_limits(self, potential_weekly_limit, potential_daily_limit):
+        if potential_weekly_limit not in self.optimized_weekly_limits:
+            start_time = time.time()
+            g = QuarterCardGraph(
+                self.conflicts, 
+                potential_daily_limit, 
+                potential_weekly_limit, 
+                self.hubs
+            )
+            g.maximize_flow()
+            if g.total_flow > self.best_flow:
+                self.best_graph = g
+                self.best_weekly_limit = potential_weekly_limit 
+                self.best_daily_limit = potential_daily_limit
+                self.best_flow = self.best_graph.total_flow
+            # If adding to the weekly limit changed nothing,
+            # then adding to it again will change nothing
+            if self.prev_flow >= g.total_flow:
+                return True, None
+            self.prev_flow = g.total_flow
+            # If adding to the daily limit for a weekly limit changed nothing,
+            # then no need to try with higher daily limits for that weekly limit
+            if self.prev_flows_by_weekly_lim[potential_weekly_limit] >= g.total_flow:
+                self.optimized_weekly_limits.add(potential_weekly_limit)
+            self.prev_flows_by_weekly_lim[potential_weekly_limit] = g.total_flow
+            runtime = time.time()-start_time
+            print(
+                "Weekly limit -> ", potential_weekly_limit,
+                "; Daily limit -> ", potential_daily_limit,
+                "; Flow -> ", g.total_flow,
+                "; Runtime -> ", runtime
+            )
+            return False, runtime
+        return False, None
+        
+
+    def optimize_limits(self):
+        runtimes = []
+        for potential_daily_limit in range(1, daily_limit+1):
+            self.prev_flow = 0
+            for potential_weekly_limit in range(1, weekly_limit+1):
+                break_time, runtime = self.run_one_set_of_limits(
+                    potential_weekly_limit, potential_daily_limit
+                )
+                if break_time:
+                    break
+                if runtime:
+                    runtimes.append(runtime)
+                # If you achieve max flow, just stop.
+                if self.best_flow == len(self.hubs)*len(DAYS_OF_THE_WEEK):
+                    print("Mean runtime ->", sum(runtimes)/len(runtimes))
+                    return 
+        print("Mean runtime ->", sum(runtimes)/len(runtimes))
+
+
 if __name__ == "__main__":
     conflicts = []
     location_resolver = LocationResolver(Path("new_location_data.json"))
@@ -685,53 +760,24 @@ if __name__ == "__main__":
                 )
                 
             conflicts.append(conflict_obj)
-    daily_limit = 5
-    weekly_limit = 20
-    best_weekly_limit = 0
-    best_daily_limit = 0
-    best_graph = None
-    best_flow = 0
-    runtimes = []
-    prev_flow = 0
-    for potential_daily_limit in range(1, daily_limit+1):
-        for potential_weekly_limit in range(potential_daily_limit, weekly_limit+1):
-            start_time = time.time()
-            g = QuarterCardGraph(
-                conflicts, 
-                potential_daily_limit, 
-                potential_weekly_limit, 
-                ("Gimme", "WSH", "Cornell Store", "Olin Library", "Kennedy Hall", "Mann Library", "Dairy Bar", "Temple of Zeus")
-            )
-            g.maximize_flow()
-            if g.total_flow > best_flow:
-                best_graph = g
-                best_weekly_limit = potential_weekly_limit 
-                best_daily_limit = potential_daily_limit
-                best_flow = best_graph.total_flow
-            if prev_flow == g.total_flow:
-                break
-            prev_flow = g.total_flow
-            runtime = time.time()-start_time
-            runtimes.append(runtime)
-            print(
-                "Weekly limit -> ", potential_weekly_limit,
-                "; Daily limit -> ", potential_daily_limit,
-                "; Flow -> ", g.total_flow,
-                "; Runtime -> ", time.time()-start_time)
-    print("Mean runtime ->", sum(runtimes)/len(runtimes))
+    hubs = ("Gimme", "WSH", "Cornell Store", "Olin Library", "Kennedy Hall", "Mann Library", "Dairy Bar", "Temple of Zeus")
+    daily_limit = 20
+    weekly_limit = 13
+    limit_optimizer = LimitOptimizer(daily_limit, weekly_limit, hubs, conflicts)
+    limit_optimizer.optimize_limits()
 
     # print(best_graph)
-    print("Best daily limit -> ", best_daily_limit)
-    print("Best weekly limit -> ", best_weekly_limit)
-    print("Best flow -> ", best_flow)
+    print("Best daily limit -> ", limit_optimizer.best_daily_limit)
+    print("Best weekly limit -> ", limit_optimizer.best_weekly_limit)
+    print("Best flow -> ", limit_optimizer.best_flow)
 
     # for k, v in g.bellman_ford().items():
     #     print(str(k) + " " + str(v))
-    for k, v in best_graph.adjacencies.items():
+    for k, v in limit_optimizer.best_graph.adjacencies.items():
         if isinstance(k, MemberDayTimeNode):
             edges = {edge for edge in v if edge.flow > 0}
-            # if edges:
-            #     print(str(k) + "   " + str(edges))
+            if edges:
+                print(str(k) + "   " + str(edges))
     # print(g)
         
         
